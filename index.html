@@ -21,7 +21,7 @@
 
       const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1.2);
       scene.add(light);
-      camera.position.set(0, 5, 10);
+      camera.position.set(0, 2, 10);
 
       const controls = new THREE.OrbitControls(camera, renderer.domElement);
       controls.enableDamping = true;
@@ -29,6 +29,7 @@
       const loader = new THREE.OBJLoader();
       loader.load('model2.obj', function (obj) {
         obj.scale.set(1, 1, 1);
+        obj.position.set(0, 0, 0);
         scene.add(obj);
       });
 
